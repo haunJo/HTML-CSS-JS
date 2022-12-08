@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Window</h2>
+    <p id="demo"></p>
+    
+    <hr/>
+    <p>Click the button to open a new browser window.</p>
+    <button onclick="myFunction()">New Window Open</button>
+
+    <script>
+        document.getElementById("demo").innerHTML =
+                "Browser inner window width: " + window.innerWidth + "px<br>" +
+                "Browser inner window height: " + window.innerHeight + "px";
+        function myFunction() {
+            window.open("https://www.w3schools.com");
+        }    
+</script>        
+</body>
+</html>

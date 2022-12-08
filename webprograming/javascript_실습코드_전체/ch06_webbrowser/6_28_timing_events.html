@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript Timing</h2>
+
+    <p>Click "Try it". Wait 3 seconds. The page will alert "Hello".</p>
+    <p>Click "Stop" to prevent the first function to execute.</p>
+    <p>(You must click "Stop" before the 3 seconds are up.)</p>
+    <!-- setTimeout(myFunction, 3000) => 3000ms(3초)후에 myFunction을 1번 실행 -->
+    <button onclick="myVar = setTimeout(myFunction, 3000)">Try it</button>
+    <button onclick="clearTimeout(myVar)">Stop it</button>
+    
+    <hr/>
+    <h2>JavaScript Timing</h2>
+    <p>A script on this page starts this clock:</p>    
+    <p id="demo"></p>
+    <button onclick="clearInterval(myVar1)">Stop time</button>
+    
+    <script>
+        function myFunction() {
+            alert("Hello");
+        }
+
+        let myVar1 = setInterval(myTimer, 1000);
+        function myTimer() {
+            const d = new Date();
+            document.getElementById("demo").innerHTML = d.toLocaleTimeString();
+        }
+    </script>
+</body>
+</html>

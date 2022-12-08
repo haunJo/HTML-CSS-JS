@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #myDiv {
+          border: thick solid blue;
+        }
+    </style>
+    <title>Document</title>
+</head>
+<body>
+    <h1>Hello World!</h1>
+    <button onclick="myFunction()">Set background</button>
+    
+    <hr/>
+
+    <div id="myDiv">This is a div.</div>
+    <br>
+    <button type="button" onclick="myFunction1()">Change color of the four borders</button>
+    
+    <hr/>
+    <button type="button" id="myBtn" onclick="myFunction2()">
+            Change the height of this button</button>    
+ 
+    <script>
+        function myFunction() {
+            document.body.style.background = 
+                "#f3f3f3 url('images/img_tree.png') no-repeat right top";
+            document.body.style.backgroundColor = "red";
+        }
+        function myFunction1() {
+            document.getElementById("myDiv").style.borderColor = "yellow";
+        }
+        function myFunction2() {
+            document.getElementById("myBtn").style.height = "50px";
+        }
+    </script>
+        
+</body>
+</html>

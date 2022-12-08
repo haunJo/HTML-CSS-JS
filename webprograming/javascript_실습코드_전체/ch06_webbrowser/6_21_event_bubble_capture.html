@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        #myDiv1, #myDiv2 {
+          background-color: coral;
+          padding: 50px;
+        }
+        #myP1, #myP2 {
+          background-color: white; 
+          font-size: 20px;
+          border: 1px solid;
+          padding: 20px;
+        }
+    </style>        
+    <title>Document</title>
+</head>
+<body>
+    <h2>JavaScript addEventListener()</h2>
+
+    <div id="myDiv1">
+      <h2>Bubbling:</h2>
+      <p id="myP1">Click me!</p>
+    </div><br>
+    
+    <div id="myDiv2">
+      <h2>Capturing:</h2>
+      <p id="myP2">Click me!</p>
+    </div>
+    
+    <script>
+        // myDiv1 객체의 자식 객체
+        // event bubbling 발생순서 : 자식객체 -> 부모 객체
+        document.getElementById("myP1").addEventListener("click", function() {
+            alert("You clicked the white element!");
+        }, false);  // event bubbling phase
+        // 부모 객체
+        document.getElementById("myDiv1").addEventListener("click", function() {
+            alert("You clicked the orange element!");
+        }, false);  // event bubbling phase
+        
+        // event capturing 발생순서 : 부모 객체 -> 자식객체
+        document.getElementById("myP2").addEventListener("click", function() {
+            alert("You clicked the white element!");
+        }, true);  // event capturing phase
+        
+        document.getElementById("myDiv2").addEventListener("click", function() {
+            alert("You clicked the orange element!");
+        }, true);  // event capturing phase
+    </script>    
+</body>
+</html>

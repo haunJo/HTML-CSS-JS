@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+
+    <h2>JavaScript addEventListener()</h2>
+    <p>This example uses the addEventListener() method to attach a 
+        click event to a button.</p>
+    <button id="myBtn">Try it</button>
+    <p id="demo"></p>
+    
+    <script>
+        // 동일 html 객체에 동일 event를 여러번 반복 등록 가능
+        document.getElementById("myBtn").addEventListener("click", function() {
+            alert("Hello World!, first click event");
+        });
+        document.getElementById("myBtn").addEventListener("click", myFunction);
+        document.getElementById("myBtn").addEventListener("click", someOtherFunction);
+        function myFunction() {
+            alert ("Hello World!, 2nd click event");
+        }
+        function someOtherFunction() {
+            alert ("This function was also executed!");
+        }
+
+        // 동일 html 객체에 종류가 다른 event들을 여러개 등록 가능
+        var x = document.getElementById("myBtn");
+        x.addEventListener("mouseover", myFunction1);
+        x.addEventListener("click", mySecondFunction1);
+        x.addEventListener("mouseout", myThirdFunction1);
+
+        function myFunction1() {
+            document.getElementById("demo").innerHTML += "Moused over!<br>";
+        }
+        function mySecondFunction1() {
+            document.getElementById("demo").innerHTML += "Clicked!<br>";
+        }
+        function myThirdFunction1() {
+            document.getElementById("demo").innerHTML += "Moused out!<br>";
+        }
+
+    </script>
+    
+    
+</body>
+</html>
