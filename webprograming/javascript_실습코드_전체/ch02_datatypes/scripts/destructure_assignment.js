@@ -29,6 +29,7 @@ var { price, title, memo = '없음' } = book;
 console.log(title);
 console.log(price);
 console.log(memo);
+console.log(book.price === price)
 
 // 중첩된 객체 분해
 var book = { title: 'Java포켓 레퍼런스 ', publish: '기술평론사', price: 26800,

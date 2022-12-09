@@ -1,5 +1,7 @@
 // 객체 for in
 var data = { apple:150, orange:100, banana: 120 };
+console.log(typeof data);
+
 // key에 'apple', 'orange', 'banana' 문자열로 넘어옴
 // data['apple'] => 150, data.apple => 150
 for (var key in data) {
@@ -18,6 +20,7 @@ Array.prototype.hoge = function () {}
 for (var key in data) {
   console.log(data[key]);
 }
+//apple orange banana
 
 var data = [ 'apple', 'orange', 'banana' ];
 // data.length를 사용하면 정상적으로 동작됨

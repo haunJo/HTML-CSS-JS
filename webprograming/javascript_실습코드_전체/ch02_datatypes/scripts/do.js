@@ -1,4 +1,4 @@
-var x = 8;
+var x = 1;
 do {
   console.log('x의 값은 ' + x);
   x++;
