@@ -16,7 +16,7 @@ var result = data.map(function(value, index, array) {
 console.log(result);
 
 
-// some
+// some : 순회 중 하나라도 만족하는 값이 나오면 true 반환
 var data = [4, 9, 16, 25];
 var result = data.some(function(value, index, array) {
   return value % 3 === 0;
@@ -29,7 +29,7 @@ if (result) {
 }
 
 
-// filter
+// filter 조건을 만족하는 것을 배열로 만듬
 var data = [4, 9, 16, 25];
 var result = data.filter(function(value, index, array) {
   return value % 2 === 1;

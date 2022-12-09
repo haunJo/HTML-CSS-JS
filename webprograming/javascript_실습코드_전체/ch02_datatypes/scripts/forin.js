@@ -15,12 +15,12 @@ for (var key in data) {
 }
 
 var data = [ 'apple', 'orange', 'banana' ];
-Array.prototype.hoge = function () {}
+Array.prototype.hoge = function () {} // [Function (anonymous)]
 // for in 사용할 때 Array.prototype.hoge 함수 호출 => Array는 for ~ in 사용 권장 안함
 for (var key in data) {
-  console.log(data[key]);
+  console.log(data[key]); //apple orange banana
 }
-//apple orange banana
+
 
 var data = [ 'apple', 'orange', 'banana' ];
 // data.length를 사용하면 정상적으로 동작됨

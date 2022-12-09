@@ -1,15 +1,15 @@
 var dat = new Date(2016, 11, 25, 11, 37, 15, 999);
-console.log(dat);
-console.log(dat.getFullYear());
-console.log(dat.getMonth());
-console.log(dat.getDate());
-console.log(dat.getDay());
-console.log(dat.getHours());
-console.log(dat.getMinutes());
-console.log(dat.getSeconds());
-console.log(dat.getMilliseconds());
-console.log(dat.getTime());
-console.log(dat.getTimezoneOffset());
+console.log(dat); //모든 시간
+console.log(dat.getFullYear()); //연도
+console.log(dat.getMonth()); //월
+console.log(dat.getDate()); //날짜
+console.log(dat.getDay()); //요일
+console.log(dat.getHours()); //시
+console.log(dat.getMinutes()); //분
+console.log(dat.getSeconds()); //초
+console.log(dat.getMilliseconds()); //미리초
+console.log(dat.getTime()); // 시간
+console.log(dat.getTimezoneOffset()); //?
 
 console.log(dat.getUTCFullYear());
 console.log(dat.getUTCMonth());
