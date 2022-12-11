@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to calculate multiplication and division of two numbers</title>
+    <style> 
+        body{margin: 30px;}
+    </style>
+</head>
+<body>
+    <p>문제 2. 원의 부피 구하기
+        
+
+    <form>
+        Radius : <input type="text" id="radius" /><br>
+        Volume: <input type="text" id="volume" /><br>
+        <br>
+        <input type="button" onClick="Calculate()" Value="Calculate" />
+    </form>
+
+
+    <script>
+        function Calculate()
+        {
+           radius = document.getElementById('radius').value;
+           if(radius < 0){
+            radius = -1*radius;
+           }
+           volume = ((4*(Math.PI)*Math.pow(radius,3))/3).toFixed(4);
+           document.getElementById('volume').value = volume;
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test7</title>
+    <style>
+        .focusedin {
+            background: green;
+	    }
+        .focusedout {
+            background: blue;
+	    }
+        </style>
+        <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+        <script>
+            $(document).ready(function(){
+                $("div").focusin(function(){
+                    // coding here
+                    $(this).attr('class','focusedin');
+                });
+
+                $("div").focusout(function(){
+                    // coding here
+                    $(this).attr('class', 'focusedout');
+                });
+            });
+        </script>
+    </head>
+<body>
+    <h1>Set background color of an element when the element gets focus or loses focus</h1>
+    <div>
+        First name: <input type="text"><br>
+        Last name: <input type="text">
+    </div>
+</body>
+</html>

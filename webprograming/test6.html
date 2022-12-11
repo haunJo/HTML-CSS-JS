@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>test8</title>
+    <style>
+        .blink {
+            background-color: blue;
+            color: black;
+            font-size: 20px;
+        }
+        p{
+            font-size: 50px;
+        }
+    </style>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        $(document).ready(function(){
+        // coding here
+        $('#button1').click(function(){
+            $('.blink').fadeIn(300);
+        });
+        $('#button2').click(function(){
+            $('.blink').fadeOut(300);
+        });
+      });
+    </script>
+    </head>
+<body>
+    <p><b>Fade in and fade out all division elements</b></p>
+    <p class="blink">My Effect is fadeOut Effect</p> 
+    <button id="button1">Fade In(3 Second)</button>
+    <button id="button2">Fade Out(3 Second)</button>
+
+ 
+
+</body>
+</html>

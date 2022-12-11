@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript program to calculate multiplication and division of two numbers</title>
+    <style> 
+        body{margin: 30px;}
+    </style>
+</head>
+<body>
+    <p>문제 3. 아래 화면에서 1st Number와 2nd Number에 숫자를 입력하고, <br>
+        Multiply 버튼을 click하면 id가 "mul_result"인 span tag에 곱셈 결과 숫자를 출력하고 <br>
+        Divide 버튼을 click하면 id가 "div_result"인 span tag에 나눗셈 결과값을 출력하시오</p>
+
+    <form>
+        1st Number : <input type="text" id="firstNumber" /><br>
+        2nd Number: <input type="text" id="secondNumber" /><br>
+        <br>
+        <input type="button" onClick="multiplyBy()" Value="Multiply" />
+        <input type="button" onClick="divideBy()" Value="Divide" />
+    </form>
+    <p> multiply result : <span id = "mul_result"></span> <br>
+        divide result : <span id = "div_result"></span>
+    </p>
+
+    <script>
+        function multiplyBy()
+        {
+            // coding here
+            let a = document.getElementById("firstNumber").value;
+            let b = document.getElementById("secondNumber").value;
+
+            let result = a*b;
+            document.getElementById("mul_result").innerHTML = result;
+            
+        }
+
+        function divideBy() 
+        { 
+            // coding here
+            let a = document.getElementById("firstNumber").value;
+            let b = document.getElementById("secondNumber").value;
+
+            let result = a/b;
+            document.getElementById("div_result").innerHTML = result;
+        
+        }
+    </script>
+</body>
+</html>

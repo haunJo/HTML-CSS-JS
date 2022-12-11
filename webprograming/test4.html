@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .center {padding-top:10px;
+                color: red;
+                text-align: center;
+        }
+
+        .large {
+            font-size: 40px;
+            color: black;
+        }
+    </style>
+<head>
+    <script src="http://code.jquery.com/jquery-3.1.1.js"></script>
+    <script>
+        
+        $(document).ready(function(){
+        // coding here
+            $('button').click(function(){
+                $('p').removeClass('center').addClass('large');
+        })
+      });
+    </script>
+</head>
+<body>
+    <h1>Chang a css class name using jquery</h1>
+    <p class="center">jquery Exercises</p>
+    <button>Click to set paragraph background color</button>
+
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assignment 5</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+</head>
+<body>
+  <h1> 이 문제는 jquery5번 문제 jquery 6문제와 거의 똑같다 => 과제 유심히 봐야할듯 두 과제가 섞임</h1>
+  <h2>Background color 변경</h2>
+
+  <button>Click to set paragraph background color</button>
+  <p>1st paragraph - background color red로 변경</p>
+  <p>2st paragraph - background color yellow로 변경</p>
+  
+        
+  <script>
+      // 문제 4. <button>을 click하면, 모든 <p> tag의 background color를 "yellow"로 바꿔라
+      $(document).ready(function(){
+        $('button').click(function(){
+            $('p').first().css('background-color','red');
+            $('p').eq(1).css("background-color", "yellow")
+        })
+      });
+
+  </script>    
+</body>
+</html>

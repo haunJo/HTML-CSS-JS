@@ -1,6 +1,6 @@
 // NaN (Not a Number)
 // NaN값을 검출할려면, Number.isNaN을 사용할 것
-console.log(Number.NaN === Number.NaN); // false
+console.log(Number.NaN === Number.NaN); // false NaN은 자신 자신과도 같지 않음
 
 // SAFE INTEGER 사용 예
 console.log(Number.MAX_SAFE_INTEGER);

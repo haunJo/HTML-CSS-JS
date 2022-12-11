@@ -1,7 +1,7 @@
 // map의 key는 === 연산자로 비교됨
 var m = new Map();
 m.set('1', 'hoge');
-console.log(m.get(1));
+console.log(m.get('1'));
 
 
 // NaN으로 key를 사용하는데 문제 없음

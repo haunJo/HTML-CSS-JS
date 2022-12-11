@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JavaScript로 Table 만들기</title>
+    <style>
+        body {padding-top:10px}
+        table, th, td {
+            border: 1px solid black;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <p>문제 4-1. Add 버튼을 누르면 add_element_to_array() 함수를 호출하는데, 
+        이 함수를 구현하시오. id가 text1인 input tag의 값을 읽어 array배열변수에 
+        element를 추가할 것.</p>
+    <p>문제 4-2. Display 버튼을 누르면 display_array() 함수를 호출하는데, 
+        이 함수를 구현하시오. array배열변수에 값들을 table 형태로 출력할 것</p>
+    <p style="color:red">조건1. id가 text1인 input tag에 아무 값도 없이 Add 버튼을
+    click하면 alert("element를 입력하세요.");를 사용하여 coding할 것 </p>
+    <p style="color:red">조건2. display_array()함수 구현할 때, display할 element가
+    하나도 없는 경우는 alert("display할 element가 없습니다.");를 사용하여 coding할 것</p>
+    <br><br><br>
+    <input type="text" id="text1"></input>
+    <input type="button" id="button1" value="Add" onclick="add_element_to_array();"></input>
+    <input type="button" id="button2" value="Display" onclick="display_array();"></input>
+    <hr>
+    <div id="Result"></div> 
+
+    <script>
+        var elemNum = 0;    // elemNum : element 갯수를 갖고 있는 변수
+        var array = [];     // array : element들을 저장하는 배열 변수
+
+        function add_element_to_array()
+        {
+            // coding here
+            val = document.getElementById('text1').value;
+            if(val == ''){
+                alert('element를 입력하세요,');
+                return;
+            }
+            array.push(val);
+        }
+
+        function display_array()
+        {
+            if(array.length==0){
+                alert('displayy 할 element가 없습니다');
+                return;
+            }
+            // coding here
+            resDiv = document.getElementById('Result');
+            resDiv.innerHTML = '';
+            table = document.createElement("table");
+            row = document.createElement("tr");
+            col1=document.createElement("th");
+            col2=document.createElement("th");
+            col1.innerHTML='배열 index';
+            col2.innerHTML= 'element 내용';
+            resDiv.appendChild(table);
+            table.appendChild(row);
+            row.appendChild(col1);
+            row.appendChild(col2);
+            for(let i=0;i<array.length;i++){
+                row=document.createElement("tr");
+                col1=document.createElement("td");
+                col2=document.createElement("td");
+
+                col1.innerHTML=i;
+                col2.innerHTML=array[i];
+
+                table.appendChild(row);
+                row.appendChild(col1);
+                row.appendChild(col2);
+            }
+        }
+    </script>
+</body>
+</html>
